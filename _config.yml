@@ -1,13 +1,12 @@
-title: John Doe # your name (or website title) here
-logo: "/images/logo.png?raw=true" # your photo (or logo) here
+title: 李明鸿 # your name (or website title) here
+logo: "/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230807182358.jpg" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  First description 
+  哈尔滨理工大学计算机科学与技术专业本科生
   <br><br>
-  Second description 
+   目标找一个实习在七月份
   <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
+ 
   
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme
-google_analytics: UA-000000-0 # your Google Analytics tracking ID here
