@@ -71,18 +71,50 @@
             border-top: 1px solid #e2e8f0;
             margin: 2rem 0;
         }
+        /* 导航样式优化（可选，仅为更美观） */
+        .nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .nav a {
+            font-weight: 500;
+        }
+        footer {
+            text-align: center;
+            color: #64748b;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
     </style>
 </head>
 <body>
+    <!-- 优化2：导航栏（加在body开头、h1前面） -->
+    <div class="nav">
+        <a href="#about">关于我</a>
+        <a href="#skills">技术栈</a>
+        <a href="#algorithm">算法能力</a>
+        <a href="#projects">项目经历</a>
+        <a href="#code">核心代码</a>
+        <a href="#problems">踩坑解决</a>
+        <a href="#contact">联系方式</a>
+    </div>
+
     <h1>李明鸿 | C++后端开发实习生</h1>
     <p>哈尔滨理工大学计算机科学与技术专业本科生 | 目标2026年7月后端开发实习岗位</p>
 
     <hr class="section-divider">
 
-    <h2>关于我</h2>
+    <!-- 关于我（加id=about） -->
+    <h2 id="about">关于我</h2>
     <p>我是哈尔滨理工大学计算机科学与技术专业大三学生，专注于C++后端开发方向，系统掌握操作系统、计算机网络、数据结构等核心课程。具备扎实的C++编码能力与Socket网络编程实践经验，熟悉Linux系统操作与多线程并发开发，有完整的项目落地与工程化实践经验，希望能在后端开发岗位深耕技术、创造价值。</p>
 
-    <h2>核心技术栈</h2>
+    <!-- 核心技术栈（加id=skills） -->
+    <h2 id="skills">核心技术栈</h2>
     <ul>
         <li><strong>核心开发语言</strong>：C/C++、Java、Python</li>
         <li><strong>网络与系统编程</strong>：Winsock/Socket TCP/IP、Linux系统编程、多线程/并发编程、进程间通信</li>
@@ -90,14 +122,16 @@
         <li><strong>核心能力</strong>：数据结构与算法、面向对象设计、问题排查与调试</li>
     </ul>
 
-    <h2>算法能力</h2>
+    <!-- 算法能力（加id=algorithm） -->
+    <h2 id="algorithm">算法能力</h2>
     <ul>
-        <li>刷题平台：LeetCode（账号：【你的昵称】）</li>
+        <li>刷题平台：LeetCode（账号：【替换成你的LeetCode昵称】）</li>
         <li>刷题量：100+题（聚焦后端高频考点：数组、链表、哈希表、多线程）</li>
-        <li>LeetCode主页：<a href="你的链接">点击查看</a></li>
+        <li>LeetCode主页：<a href="【替换成你的LeetCode链接】">点击查看</a></li>
     </ul>
 
-    <h2>项目经历</h2>
+    <!-- 项目经历（加id=projects） -->
+    <h2 id="projects">项目经历</h2>
     <h3>C++ TCP 多人在线聊天室</h3>
     <p><strong>技术栈</strong>：C++、Winsock2、TCP/IP、多线程、互斥锁 | <a href="https://github.com/LMH-eng/cpp-chat-room">GitHub源码</a></p>
     <ul>
@@ -115,7 +149,8 @@
         <li>完整的碰撞检测、分数统计、关卡递进逻辑。</li>
     </ul>
 
-    <h2>核心代码片段（聊天室项目）</h2>
+    <!-- 核心代码片段（加id=code） -->
+    <h2 id="code">核心代码片段（聊天室项目）</h2>
     <h3>多线程处理客户端连接</h3>
     <pre><code>// 服务端监听并接收客户端连接的核心逻辑
 SOCKET serverSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -133,18 +168,27 @@ while (1) {
     CreateThread(NULL, 0, ClientHandler, (LPVOID)clientSocket, 0, NULL);
 }</code></pre>
 
-    <h2>项目踩坑与解决</h2>
+    <!-- 项目踩坑与解决（加id=problems） -->
+    <h2 id="problems">项目踩坑与解决</h2>
     <ul>
         <li>聊天室：多线程数据错乱 → 用临界区互斥锁保护共享列表；</li>
         <li>聊天室：TCP粘包 → 设计“长度+内容”的消息协议；</li>
         <li>飞机大战：画面闪烁 → 双缓冲绘图技术解决。</li>
     </ul>
 
-    <h2>联系方式</h2>
+    <!-- 联系方式（加id=contact） -->
+    <h2 id="contact">联系方式</h2>
     <ul>
         <li>GitHub：<a href="https://github.com/LMH-eng">github.com/LMH-eng</a></li>
         <li>邮箱：【2364232584@qq.com】</li>
         <li>电话：【18646912836】</li>
     </ul>
+
+    <!-- 优化3：页脚（加在页面最后） -->
+    <hr class="section-divider">
+    <footer>
+        <p>© 2026 李明鸿 | C++后端开发实习生</p>
+        <p>个人技术主页：<a href="https://lmh-eng.github.io">lmh-eng.github.io</a></p>
+    </footer>
 </body>
 </html>
