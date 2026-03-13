@@ -41,5 +41,5 @@
 
 ## 联系方式
 - GitHub：[github.com/LMH-eng](https://github.com/LMH-eng)
-- 邮箱：【替换成你的邮箱】
-- 电话：【替换成你的电话】
+- 邮箱：【2364232584@qq.com】
+- 电话：【18646912836】
