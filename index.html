@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李明鸿 | C++后端开发实习生</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            line-height: 1.8;
+            color: #1e293b;
+            background: #f8fafc;
+        }
+        h1 {
+            font-size: 2.2rem;
+            color: #0f172a;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: #1e40af;
+            margin: 1.8rem 0 1rem;
+        }
+        h3 {
+            font-size: 1.2rem;
+            color: #334155;
+            margin: 1.2rem 0 0.8rem;
+        }
+        p, li {
+            font-size: 1.05rem;
+            color: #334155;
+        }
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        code {
+            background: #eff6ff;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            color: #1e40af;
+        }
+        pre {
+            background: #0f172a;
+            color: #f8fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        pre code {
+            background: transparent;
+            color: #f8fafc;
+            padding: 0;
+        }
+        .section-divider {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>李明鸿 | C++后端开发实习生</h1>
+    <p>哈尔滨理工大学计算机科学与技术专业本科生 | 目标2026年7月后端开发实习岗位</p>
+
+    <hr class="section-divider">
+
+    <h2>关于我</h2>
+    <p>我是哈尔滨理工大学计算机科学与技术专业大三学生，专注于C++后端开发方向，系统掌握操作系统、计算机网络、数据结构等核心课程。具备扎实的C++编码能力与Socket网络编程实践经验，熟悉Linux系统操作与多线程并发开发，有完整的项目落地与工程化实践经验，希望能在后端开发岗位深耕技术、创造价值。</p>
+
+    <h2>核心技术栈</h2>
+    <ul>
+        <li><strong>核心开发语言</strong>：C/C++、Java、Python</li>
+        <li><strong>网络与系统编程</strong>：Winsock/Socket TCP/IP、Linux系统编程、多线程/并发编程、进程间通信</li>
+        <li><strong>数据存储与工具</strong>：MySQL、Git、Docker、Visual Studio</li>
+        <li><strong>核心能力</strong>：数据结构与算法、面向对象设计、问题排查与调试</li>
+    </ul>
+
+    <h2>算法能力</h2>
+    <ul>
+        <li>刷题平台：LeetCode（账号：【你的昵称】）</li>
+        <li>刷题量：100+题（聚焦后端高频考点：数组、链表、哈希表、多线程）</li>
+        <li>LeetCode主页：<a href="你的链接">点击查看</a></li>
+    </ul>
+
+    <h2>项目经历</h2>
+    <h3>C++ TCP 多人在线聊天室</h3>
+    <p><strong>技术栈</strong>：C++、Winsock2、TCP/IP、多线程、互斥锁 | <a href="https://github.com/LMH-eng/cpp-chat-room">GitHub源码</a></p>
+    <ul>
+        <li>服务端采用多线程并发模型，为每个客户端创建独立收发线程，支持10+用户同时在线；</li>
+        <li>处理TCP粘包问题，设计“消息头+消息体”协议，保证消息边界清晰；</li>
+        <li>用互斥锁保护共享资源，避免多线程竞态问题；</li>
+        <li>支持公屏群聊、一对一私聊、用户上下线通知。</li>
+    </ul>
+
+    <h3>C++ 飞机大战游戏</h3>
+    <p><strong>技术栈</strong>：C++、EasyX图形库、面向对象编程 | <a href="https://github.com/LMH-eng/cpp-plane-battle">GitHub源码</a></p>
+    <ul>
+        <li>拆分玩家、敌机、子弹等独立类，实现高内聚低耦合的代码架构；</li>
+        <li>双缓冲绘图避免画面闪烁，保证游戏流畅运行；</li>
+        <li>完整的碰撞检测、分数统计、关卡递进逻辑。</li>
+    </ul>
+
+    <h2>核心代码片段（聊天室项目）</h2>
+    <h3>多线程处理客户端连接</h3>
+    <pre><code>// 服务端监听并接收客户端连接的核心逻辑
+SOCKET serverSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+listen(serverSocket, 5); // 监听队列长度5
+printf("服务端启动，等待客户端连接...\n");
+
+// 死循环接收连接，每个连接创建独立线程
+while (1) {
+    SOCKET clientSocket = accept(serverSocket, NULL, NULL);
+    if (clientSocket == INVALID_SOCKET) {
+        printf("连接失败，错误码：%d\n", WSAGetLastError());
+        continue;
+    }
+    // 创建线程处理客户端收发
+    CreateThread(NULL, 0, ClientHandler, (LPVOID)clientSocket, 0, NULL);
+}</code></pre>
+
+    <h2>项目踩坑与解决</h2>
+    <ul>
+        <li>聊天室：多线程数据错乱 → 用临界区互斥锁保护共享列表；</li>
+        <li>聊天室：TCP粘包 → 设计“长度+内容”的消息协议；</li>
+        <li>飞机大战：画面闪烁 → 双缓冲绘图技术解决。</li>
+    </ul>
+
+    <h2>联系方式</h2>
+    <ul>
+        <li>GitHub：<a href="https://github.com/LMH-eng">github.com/LMH-eng</a></li>
+        <li>邮箱：【你的邮箱】</li>
+        <li>电话：【你的电话】</li>
+    </ul>
+</body>
+</html>
