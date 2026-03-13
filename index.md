@@ -1,35 +1,45 @@
-## Portfolio
+# 李明鸿 | C++后端开发实习生
+哈尔滨理工大学计算机科学与技术专业本科生 | 目标2026年7月后端开发实习岗位
 
 ---
 
-### Category Name 1 
+## 关于我
+我是哈尔滨理工大学计算机科学与技术专业大三学生，专注于C++后端开发方向，系统掌握操作系统、计算机网络、数据结构等核心课程。具备扎实的C++编码能力与Socket网络编程实践经验，熟悉Linux系统操作与多线程并发开发，有完整的项目落地与工程化实践经验，希望能在后端开发岗位深耕技术、创造价值。
 
-[Project 1 Title](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+## 核心技术栈
+- **核心开发语言**：C/C++、Java、Python
+- **网络与系统编程**：Winsock/Socket TCP/IP、Linux系统编程、多线程/并发编程、进程间通信
+- **数据存储与工具**：MySQL、Git、Docker、Visual Studio
+- **核心能力**：数据结构与算法、面向对象设计、问题排查与调试
 
----
-[Project 2 Title](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+## 项目经历
+### C++ TCP 多人在线聊天室
+**技术栈**：C++、Winsock2、TCP/IP、多线程、互斥锁 | [GitHub源码](https://github.com/LMH-eng/cpp-chat-room)
 
----
-[Project 3 Title](http://example.com/)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+基于C/S架构开发的多人实时通信系统，完整实现了后端服务的高并发处理与可靠消息传输：
+- 服务端采用多线程并发模型，为每个客户端创建独立收发线程，支持10+用户同时在线；
+- 处理TCP粘包问题，保证消息边界清晰、收发完整；
+- 用互斥锁实现多线程资源安全管控，避免竞态问题；
+- 支持公屏群聊、一对一私聊、用户上下线通知等核心功能。
 
----
+### C++ 飞机大战游戏
+**技术栈**：C++、EasyX图形库、面向对象编程 | [GitHub源码](https://github.com/LMH-eng/cpp-plane-battle)
 
-### Category Name 2
+完整实现的2D单机游戏，实践面向对象与模块化开发：
+- 拆分玩家、敌机、子弹等独立类，高内聚低耦合；
+- 实现碰撞检测、键盘控制、双缓冲绘图（无画面闪烁）；
+- 完整的分数统计、关卡递进、游戏生命周期管理。
 
-- [Project 1 Title](http://example.com/)
-- [Project 2 Title](http://example.com/)
-- [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
+### Java 学生信息管理系统
+**技术栈**：Java、Swing、MySQL、JDBC
+实现学生信息增删改查、成绩统计、用户登录与权限管理，通过JDBC连接MySQL数据库，设计规范化表结构。
 
----
+## 教育背景
+**哈尔滨理工大学 | 计算机科学与技术 本科**  
+2023.09 - 2027.06  
+核心课程：操作系统、计算机网络、数据结构、C++程序设计
 
-
-
-
----
-<p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
-<!-- Remove above link if you don't want to attibute -->
+## 联系方式
+- GitHub：[github.com/LMH-eng](https://github.com/LMH-eng)
+- 邮箱：【替换成你的邮箱】
+- 电话：【替换成你的电话】
